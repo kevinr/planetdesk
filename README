@@ -1,0 +1,48 @@
+"PlanetDesk" - an EarthDesk-alike using XPlanet
+-----------------------------------------------
+
+EarthDesk is a program which displays a dynamically-updated view of the Earth 
+(or some portion of it) on your desktop, if you happen to be running Mac OS X 
+or Windows.  I am no longer a Mac user, so this is a collection of scripts 
+which does more or less the same thing on Linux using XPlanet.
+
+This script assumes you use GNOME.  If you use KDE, 
+http://blog.pothoven.net/2006/01/current-satellite-wallpaper.html may be of 
+some help.
+
+To install:
+
+1.  Install XPlanet, eg. by typing `apt-get install xplanet`.
+2.  Get this code.  `git clone git://github.com/kevinr/planetdesk.git` is 
+    traditional.
+3.  cd into the code directory and run `./install.sh`, or open it in your 
+    favorite text-editor and run the commands by hand in a separate terminal.
+4.  Go to http://planetpixelemporium.com/earth.html and pay the nice man for
+    his Earth textures.  (Or really any of the planets, as you like, but you'll 
+    have to write your own XPlanet configuration file for the others.  If you
+    do, mail it to me at kevinr@free-dissociation.com and I'll include it here.
+    Surely you want to know the time at Cydonia on Mars!)
+5.  Download the files earthmap10k.jpg, earthbump10k.jpg, earthspec10k.jpg, 
+    and earthlights10k.jpg and put them in ~/.xplanet/images.
+6.  Run ~/bin/update-xplanet-background.sh -- your desktop background should
+    change.
+7.  Fiddle with the environment variables in update-xplanet-background.sh 
+    until they're set to your liking.
+8.  Install the following line in your crontab (`crontab -e` to get started):
+      2,17,32,47 * * * * $HOME/bin/update-xplanet-background.sh 2>&1 > /dev/null
+    This will update your desktop with a new world image every 15 minutes.
+
+Thanks to James Hastings-Trews for his excellent textures, Michal Pasternak for
+his download_clouds.py script, the XPlanet Developers, random blog posts and 
+pages on the Internet for help configuring XPlanet, ...
+
+Things this doesn't do which EarthDesk does:  moon shine, seasonal variation 
+(vegetation, snow cover), ...
+
+
+Questions, comments, concerns, queries, quibbles, or patches (we love patches)?
+E-mail them to me at kevinr@free-dissociation.com.
+
+
+Everything in this distribution is in the public domain, except where noted 
+otherwise.
