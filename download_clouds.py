@@ -34,8 +34,8 @@ mirrors = [ "http://www.narrabri.atnf.csiro.au/operations/NASA/clouds_4096.jpg",
             "ftp://ftp.iastate.edu/pub/xplanet/clouds_4096.jpg",
 	    "http://home.megapass.co.kr/~gitto88/cloud_data/clouds_4096.jpg",
 	    "http://home.megapass.co.kr/~holywatr/cloud_data/clouds_4096.jpg",
-            "http://www.wizabit.eclipse.co.uk/xplanet/files/mirror/clouds_4096.jpg",
-	    "http://xplanet.explore-the-world.net/clouds_4096.jpg" ]
+	    "http://xplanet.explore-the-world.net/clouds_4096.jpg"      # on probation x2
+]
 
 # end of user-tunable parameters
 
