@@ -24,5 +24,11 @@ xplanet -config bump -origin earth -latitude $LATITUDE -longitude $LONGITUDE -ra
 #gconftool-2 --type string --set /desktop/gnome/background/picture_filename "$XPLANET_DESKTOP_FILE"
 
 ### XFCE
+#Fetch the PID
+pid=$(ps -C xfce4-session -o pid=)
+#Hack to remove the leading space. Maybe not so nice, but it works.
+pid=$(echo $pid)
+#Get the environment variable from /proc
+export $(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$pid/environ)
 # xfce4-desktop won't update the background unless the filename changes, so we force a unique filename
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorLVDS1/workspace0/last-image -s $XPLANET_DESKTOP_FILE
