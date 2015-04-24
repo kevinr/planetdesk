@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# xplanet has a default search path which privileges the current directory over the system directory for images
+cd $HOME/.xplanet/images
+
 DATE=`date +%Y%m%d%H%M%S`
 XPLANET_DESKTOP_FILE_FORMAT=png
 XPLANET_DESKTOP_FILE_LOCATION=$HOME/xplanet-desktop
