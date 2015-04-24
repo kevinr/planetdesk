@@ -15,8 +15,6 @@ LONGITUDE=-71.090
 RADIUS=100
 GEOMETRY=1440x900
 
-#$HOME/bin/download_clouds.py $CLOUDS_FILE 2>&1 | tee -a $CLOUDS_LOG
-
 # expects user/pass in XPLANETCLOUDS_USER and XPLANETCLOUDS_PASS env vars
 $HOME/bin/download_clouds.sh 2>&1 | tee -a $CLOUDS_LOG
 
